@@ -1,43 +1,187 @@
-@font-face {
-   font-family: fonte;
-   src: url(font.ttf);
-
-}
- body {
-background-image: repeating-linear-gradient(45deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(41, 27, 158),rgb(249, 77, 212));  
- }
- html 
-{
-
-font-family: 'Fredoka', sans-serif;
-font-family: 'Hubballi', cursive;
-
-
-   
-    
-	
-}
-h1 {
-   font-family: fonte;
-   color: blue;
-}
-h2 {
-   font-family: fonte;
-   color: black;
+:root {
+  --bg: #0b1020;
+  --bg-soft: #151d35;
+  --text: #eff3ff;
+  --muted: #b7c2e1;
+  --accent: #6aa5ff;
+  --accent-2: #6df0c2;
+  --border: #293557;
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
-a  {
-	font-family: fonte;
-	color: red;
+* {
+  box-sizing: border-box;
 }
 
-label {
-    display: block;
-    font: 1rem 'Fira Sans', sans-serif;
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at top right, #1f2f5f 0%, var(--bg) 45%);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
 }
 
-input,
-label {
-    margin: 0.4rem 0;
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
 }
 
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(11, 16, 32, 0.8);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 0;
+}
+
+.brand {
+  display: inline-flex;
+  gap: 0.7rem;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.brand img {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+nav a[aria-current="page"],
+nav a:hover {
+  color: var(--text);
+}
+
+.hero {
+  padding: 4rem 0 3rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+.tag {
+  color: var(--accent-2);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.actions {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.btn {
+  padding: 0.7rem 1.05rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  color: #05122d;
+}
+
+.btn-ghost {
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.panel,
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.section {
+  padding: 1rem 0 3rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.intro {
+  color: var(--muted);
+}
+
+.search-label {
+  font-weight: 600;
+}
+
+.search {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0 1.2rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0e162f;
+  color: var(--text);
+}
+
+.game-grid {
+  margin-top: 0.6rem;
+}
+
+.chip {
+  display: inline-block;
+  margin-top: 0.8rem;
+  border: 1px solid #2f4a83;
+  color: #b9d0ff;
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.85rem;
+}
+
+.empty-state {
+  margin-top: 1rem;
+  color: #ffdcdc;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+@media (max-width: 800px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
