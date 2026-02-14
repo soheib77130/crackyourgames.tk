@@ -1,24 +1,82 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type"image/png" sizes="16x16" href="images/logo.png">
-  <meta charset="utf-8" />
-  <title>Crackyourgames</title>
-<head>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CrackYourGames devient un portail communautaire pour découvrir des jeux, des actualités et des recommandations en toute légalité."
+    />
+    <title>CrackYourGames — Communauté Gaming</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html" aria-label="Accueil CrackYourGames">
+          <img src="logo.png" alt="Logo CrackYourGames" />
+          <span>CrackYourGames</span>
+        </a>
+        <nav aria-label="Navigation principale">
+          <a href="index.html" aria-current="page">Accueil</a>
+          <a href="jeux.html">Catalogue</a>
+        </nav>
+      </div>
+    </header>
 
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="tag">Version 2.0 · Refonte 2026</p>
+            <h1>Un site gaming propre, rapide et utile.</h1>
+            <p>
+              Le site a été entièrement modernisé : design responsive, navigation claire,
+              contenu plus lisible et expérience optimisée sur mobile comme sur desktop.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="jeux.html">Explorer les jeux</a>
+              <a class="btn btn-ghost" href="#features">Voir les améliorations</a>
+            </div>
+          </div>
+          <aside class="panel">
+            <h2>Objectif du projet</h2>
+            <p>
+              Proposer une plateforme communautaire autour du jeu vidéo : découverte,
+              partage de ressources légales, et recommandations de jeux à tester.
+            </p>
+          </aside>
+        </div>
+      </section>
 
-  
-  <h1 style=text-align:center;> Bienvenue sur CrackYourGames Version beta (V0.2.3) (dernière maj : 01/02/2023) ! </h1>
-  <h2> Crackyourgames est un site ou tu pourra telecharger tout les crack de tout les jeux sur pc </h2>
-  <h2> Pour chaque demande de mise a jour de jeu ou pour mettre un jeu contacte moi sur discord : soheib#9685</h2>
-  
-  <a style="text-align:center;" href="https://crackyourgames.tk/jeux" target="blank">Acceder a la page de jeux </a>
+      <section id="features" class="section">
+        <div class="container">
+          <h2>Ce qui a été amélioré</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>UX & accessibilité</h3>
+              <p>Structure sémantique, contrastes améliorés, navigation clavier et mise en page claire.</p>
+            </article>
+            <article class="card">
+              <h3>Design responsive</h3>
+              <p>Grille adaptative avec composants modernes pour un rendu cohérent sur tous les écrans.</p>
+            </article>
+            <article class="card">
+              <h3>Performance</h3>
+              <p>Style rationalisé, service worker nettoyé et chargement plus léger des pages.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  
-  
-   <br>
-  <br>
-  
-  <h1> annonce : pour des raisons d'argent mon site fermera le 09/04/2023 car pas rentable pour payer le nom de domaine, si les benefice total du site dépasse 8,20€ je poursuiverai d'au moins 1 an le site</h1><br>
-    <h2> vous pouvez me soutenir ici bitcoin : 1KvvTX3CU3woj5hoG9WRJnPZ43QskJDKiW</h2>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> CrackYourGames · Communauté gaming responsable.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
